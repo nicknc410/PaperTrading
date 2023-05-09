@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Sign Up</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'appEx/site.css' %}"/>
+</head>
+
+<body>
+    <h2> Sign Up </h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    {% if messages %}
+    <div class="alert alert-info">
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+
+</body>
+</html>

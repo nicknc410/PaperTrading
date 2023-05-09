@@ -1,0 +1,31 @@
+{% extends "appEx/layout.html" %}
+{% block title %}
+About us
+{% endblock %}
+{% block content %}
+<div>
+    <h2>Stock List</h2>
+    <ol>
+        <li> <a href="{% url 'stock_info' name='AAPL' %}">Apple</a></li>
+        <li> <a href="{% url 'stock_info' name='MSFT' %}">Microsoft</a></li>
+        <li> <a href="{% url 'stock_info' name='GOOG' %}">Google</a></li>
+        <li><a href="{% url 'stock_info' name='AMZN' %}">Amazon</a></li>
+        <li> <a href="{% url 'stock_info' name='TSLA' %}">Tesla</a></li>
+        <li> <a href="{% url 'stock_info' name='JPM' %}">JP. Morgan</a></li>
+        <li><a href="{% url 'stock_info' name='WMT' %}">Walmart</a></li>
+        <li><a href="{% url 'stock_info' name='KO' %}">Coca Cola</a></li>
+        <li><a href="{% url 'stock_info' name='BAC' %}">Bank of America</a></li>
+        <li><a href="{% url 'stock_info' name='UPS' %}">United States Postal Service</a></li>
+        <li><a href="{% url 'stock_info' name='HD' %}">Home Depot</a></li>
+        <li><a href="{% url 'stock_info' name='NFLX' %}">Netflix</a></li>
+        <li><a href="{% url 'stock_info' name='UL' %}">Unilever</a></li>
+        <li><a href="{% url 'stock_info' name='SPY' %}">SPDR S&P 500</a></li>
+        <li><a href="{% url 'stock_info' name='GS' %}">Goldman Sachs</a></li>
+        <li><a href="{% url 'stock_info' name='IBM' %}">IBM</a></li>
+        <li><a href="{% url 'stock_info' name='META' %}">Meta</a></li>
+        <li><a href="{% url 'stock_info' name='NVDA' %}">Nvidia</a></li>
+        <li><a href="{% url 'stock_info' name='WBA' %}">Walgreens</a></li>
+        <li><a href="{% url 'stock_info' name='AMD' %}">AMD</a></li>
+    </ol>
+</div>
+{% endblock %}

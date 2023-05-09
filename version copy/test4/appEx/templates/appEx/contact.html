@@ -1,0 +1,18 @@
+{% extends "appEx/layout.html" %}
+{% block title %}
+Message
+{% endblock %}
+{% block content %}
+<p>Message</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<hr>
+<ul>
+    {% for m in messages %}
+        <li>{{m}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

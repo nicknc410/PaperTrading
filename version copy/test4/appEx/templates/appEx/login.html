@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'appEx/site.css' %}"/>
+</head>
+
+<body>
+    <h2> Login </h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+        <a href="{%url 'signup'%}">Sign Up</a>
+    </form>
+    {% if messages %}
+    <div class="alert alert-info">
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    
+
+</body>
+</html>
